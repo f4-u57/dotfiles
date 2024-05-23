@@ -1,0 +1,66 @@
+# Path of oh-my-zsh installation.
+export ZSH="/home/f4u57/.oh-my-zsh"
+
+# Theme
+ZSH_THEME="agnoster"
+#ZSH_THEME="robbyrussell"
+
+# Plugins
+#plugins=(zsh-syntax-highlighting zsh-completions git sudo command-not-found colored-man-pages colorize docker extract heroku hitokoto pip tmux rand-quote common-aliases)
+plugins=(git sudo command-not-found colored-man-pages colorize docker extract hitokoto pip tmux rand-quote common-aliases zsh-syntax-highlighting zsh-completions zsh-autosuggestions virtualenv)
+
+autoload -U compinit && compinit
+
+# zsh-completions setup
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+
+# Load oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
+# Set language environment
+export LANG=en_US.UTF-8
+
+# colorize plugin syntax highlight style
+export ZSH_COLORIZE_STYLE="monokai"
+
+# monokai, material
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# fix GEF " <class 'UnicodeEncodeError'> 'ascii' codec can't encode character" error
+export LC_CTYPE=C.UTF-8
+
+## Setup Command History
+export HISTFILE=~/.zsh_history
+export HISTSIZE=999999999
+export SAVEHIST=$HISTSIZE
+setopt appendhistory
+
+# Aliases
+alias ls='ls --color=auto'
+alias ipython=ipython3
+alias ll='ls -la'
+alias pwn-env='source pwn-env/bin/activate'
+alias sysinfo='fastfetch'
+alias pop-update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && flatpak update -y"
+alias /='cd /'
+alias ~='cd ~'
+alias ..='cd ../'
+alias ...='cd ../../'
+alias ....='cd ../../..'
+
+# Front
+# https://github.com/powerline/fonts
+# sudo apt-get install fonts-powerline
+
+# virtualenvwrapper
+export WORKON_HOME=~/venvs
+source ~/.local/bin/virtualenvwrapper.sh
+
+# gem
+export GEM_HOME="$HOME/.gem"
+export PATH=:$PATH:/home/f4u57/.gem/bin
+
+# go
+export PATH=:$PATH:/usr/local/go/bin
