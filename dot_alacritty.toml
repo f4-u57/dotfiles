@@ -1,0 +1,145 @@
+#import = ["~/.config/alacritty/example.toml"]
+
+shell = "/bin/zsh"
+
+working_directory = "None"
+
+live_config_reload = true
+
+ipc_socket = true
+
+[env]
+
+[window]
+#dimensions = { columns = 0, lines = 0 }
+#position = { x = 100, y = 100 }
+#padding = { x = 0, y = 0}
+dynamic_padding= true
+decorations= "Full"
+opacity = 0.9
+#blur = true
+startup_mode = "Maximized"
+#title="Alacritty"
+#dynamic_title = true
+#class = { instance = "Alacritty", general = "Alacritty" }
+#decorations_theme_variant = "None"
+#resize_increments = false
+#option_as_alt = "None"
+
+[scrolling]
+history = 100000
+#multiplier = 3
+
+[font]
+normal = { family = "Hack", style = "Regular"}
+#bold = { style = "Bold"}
+#italic = { style = "Italic"}
+#bold_italic = { style = "Bold Italic" }
+size = 14
+#offset = { x = 0, y = 0 }
+#glyph_offset = { x = 0, y = 0 }
+#builtin_box_drawing = true
+
+[colors]
+#cursor = { text = "CellBackground", cursor = "CellForeground" }
+#vi_mode_cursor = { text = "CellBackground", cursor = "CellForeground" }
+#line_indicator = { foreground = "None", background = "None" }
+#footer_bar = { foreground = "#181818", background = "#d8d8d8" }
+#selection = { text = "CellBackground", background = "CellForeground" }
+#indexed_colors = []
+#transparent_background_colors = false
+#draw_bold_text_with_bright_colors = false
+
+[colors.primary]
+background = "#0E1019"
+foreground = "#FFFAF4"
+dim_foreground = "#CDD6F4"
+bright_foreground = "#CDD6F4"
+
+[colors.normal]
+black = "#232323"
+red = "#FF000F"
+green = "#8CE10B"
+yellow = "#FFB900"
+blue = "#008DF8"
+magenta = "#6D43A6"
+cyan = "#00D8EB"
+white = "#FFFFFF"
+
+[colors.bright]
+black = "#444444"
+red = "#FF2740"
+green = "#ABE15B"
+yellow = "#FFD242"
+blue = "#0092FF"
+magenta = "#9A5FEB"
+cyan = "#67FFF0"
+white = "#FFFFFF"
+
+[colors.dim]
+#black = "#0f0f0f"
+#red = "#712b2b"
+#green = "#5f6f3a"
+#yellow = "#a17e4d"
+#blue = "#456877"
+#magenta = "#704d68"
+#cyan = "#4d7770"
+#white = "#8e8e8e"
+
+[colors.search]
+#matches = { foreground = "#181818", background = "#ac4242" }
+#focused_match = { foreground = "#181818", background = "#f4bf75" }
+
+[colors.hints]
+#start = { foreground = "#181818", background = "#f4bf75" }
+#end = { foreground = "#181818", background = "#ac4242" }
+
+[bell]
+#animation = "Linear"
+#duration = 0
+#color = "#ffffff"
+#command = "None"
+
+[selection]
+#semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+save_to_clipboard = true
+
+[cursor]
+style = { shape = "Block", blinking = "On"}
+#vi_mode_style = "None"
+#blink_interval = 750
+#blink_timeout = 5
+#unfocused_hollow = true
+#thickness = 0.15
+
+[terminal]
+osc52 = "OnlyCopy"
+
+[mouse]
+#hide_when_typing = false
+#bindings = [ { mouse = "Right", mods = "Control", action = "Paste" } ]
+
+[hints]
+#alphabet = "jfkdls;ahgurieowpq"
+
+#[[hints.enabled]]
+#command = "xdg-open" # On Linux/BSD
+#hyperlinks = true
+#post_processing = true
+#persist = false
+#mouse.enabled = true
+#binding = { key = "U", mods = "Control|Shift" }
+#regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
+
+[keyboard]
+# bindings [ { key = "L", mods = "Control|Shift", chars = "l" } ]
+# https://alacritty.org/config-alacritty-bindings.html
+
+[debug]
+render_timer = false
+persistent_logging = false
+log_level = "Warn"
+renderer = "None"
+print_events = false
+highlight_damage = false
+prefer_egl = false
